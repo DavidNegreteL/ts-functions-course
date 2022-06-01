@@ -13,6 +13,10 @@ function parseStr(input: string | string[]): string | string[] {
 }
 
 const rtaArray = parseStr('David');
+// To use as an 'array', we must do the following validation
+if (Array.isArray(rtaArray)) {
+  rtaArray.reverse();
+}
 console.log('rtaArray', 'Receive David =>', rtaArray);
 
 const rtaStr = parseStr(['D', 'a', 'v', 'i', 'd']);
