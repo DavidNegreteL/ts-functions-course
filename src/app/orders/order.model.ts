@@ -1,8 +1,7 @@
 import { User } from '../../01-enum';
 import { ProductInterface } from './../products/product.model';
-export interface Order {
-  id: string | number;
-  createdAt: Date;
+import { BaseModel } from '../base.model';
+export interface Order extends BaseModel {
   products: ProductInterface[];
   user: User;
 }
