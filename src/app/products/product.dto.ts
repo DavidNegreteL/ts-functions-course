@@ -38,3 +38,9 @@ export interface updateProductDto extends Partial<CreateProductDto> {}
  * If you need all as required
  * type|interface requiredData = required<ProductInterface>
  */
+
+/**
+ * To search products and can not modify use ReadOnly<>
+ */
+
+export interface findProductDto extends Readonly<Partial<ProductInterface>> {}

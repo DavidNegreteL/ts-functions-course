@@ -6,6 +6,7 @@ import {
   addProduct,
   products,
   updateProduct,
+  findProducts,
 } from './products/product.service';
 
 for (let index = 0; index < 50; index++) {
@@ -28,4 +29,9 @@ const product = products[0];
 updateProduct(product.id, {
   title: 'New title',
   stock: 560,
+});
+
+findProducts({
+  stock: 10,
+  color: 'red',
 });

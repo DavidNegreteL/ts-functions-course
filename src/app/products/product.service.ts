@@ -1,5 +1,9 @@
 import { ProductInterface } from './product.model';
-import { CreateProductDto, updateProductDto } from './product.dto';
+import {
+  CreateProductDto,
+  updateProductDto,
+  findProductDto,
+} from './product.dto';
 import { faker } from '@faker-js/faker';
 export const products: ProductInterface[] = [];
 
@@ -31,4 +35,8 @@ export const updateProduct = (
     ...changes,
   };
   return products[index];
+};
+
+export const findProducts = (dto: findProductDto): ProductInterface[] => {
+  return products;
 };
