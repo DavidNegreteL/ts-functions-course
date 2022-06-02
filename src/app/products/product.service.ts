@@ -25,7 +25,7 @@ export const addProduct = (data: CreateProductDto): ProductInterface => {
 };
 
 export const updateProduct = (
-  id: string | number,
+  id: ProductInterface['id'],
   changes: updateProductDto
 ): ProductInterface => {
   const index = products.findIndex((item) => item.id === id);

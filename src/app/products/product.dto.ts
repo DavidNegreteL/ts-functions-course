@@ -43,4 +43,7 @@ export interface updateProductDto extends Partial<CreateProductDto> {}
  * To search products and can not modify use ReadOnly<>
  */
 
-export interface findProductDto extends Readonly<Partial<ProductInterface>> {}
+export interface findProductDto
+  extends Readonly<Partial<Omit<ProductInterface, 'tags'>>> {
+  readonly tags: ReadonlyArray<string>;
+}
